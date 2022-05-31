@@ -1,4 +1,4 @@
-package com.shangma.num3project;
+package com.shangma;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.shangma.num3project;
+package com.shangma;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
