@@ -20,35 +20,12 @@ public class GoodsReturned extends BaseEntity {
 
 
     private static final long serialVersionUID = 2047304788784240118L;
-    /**
-     * 物流编号
-     */
-    @TableId
-    private Long id;
+
 
     /**
      * 订单编号
      */
     private Long orderId;
 
-    /**
-     * 
-     */
-    private Long createBy;
-
-    /**
-     * 
-     */
-    private Date createTime;
-
-    /**
-     * 
-     */
-    private Long updateBy;
-
-    /**
-     * 
-     */
-    private Date updateTime;
     
 }

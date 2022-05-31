@@ -48,26 +48,4 @@ public class Order extends BaseEntity implements Serializable {
      */
     private Long consigneeId;
 
-    /**
-     * 下单时间
-     */
-    private Date createTime;
-
-    /**
-     * 
-     */
-    private Long createBy;
-
-    /**
-     * 
-     */
-    private Long updateBy;
-
-    /**
-     * 
-     */
-    private Date updateTime;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 }

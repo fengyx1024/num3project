@@ -23,11 +23,6 @@ public class OrderItem extends BaseEntity {
 
 
     private static final long serialVersionUID = 2266306107874242944L;
-    /**
-     * 订单详情id
-     */
-    @TableId
-    private Long id;
 
     /**
      * 订单id
@@ -49,24 +44,5 @@ public class OrderItem extends BaseEntity {
      */
     private BigDecimal total;
 
-    /**
-     * 
-     */
-    private Long createBy;
-
-    /**
-     * 
-     */
-    private Date createTime;
-
-    /**
-     * 
-     */
-    private Date updateTime;
-
-    /**
-     * 
-     */
-    private Long updateBy;
 
 }
