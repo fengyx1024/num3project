@@ -1,10 +1,9 @@
 package com.shangma.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * @description: TODO
@@ -27,7 +26,7 @@ public class BaseEntity implements Serializable {
     /**
      *
      */
-    private Date createTime;
+    private LocalDateTime createTime;
 
     /**
      *
@@ -37,5 +36,5 @@ public class BaseEntity implements Serializable {
     /**
      *
      */
-    private Date updateTime;
+    private LocalDateTime updateTime;
 }

@@ -17,11 +17,6 @@ import lombok.EqualsAndHashCode;
 @TableName(value ="t_order")
 @Data
 public class Order extends BaseEntity implements Serializable {
-    /**
-     * 订单编号
-     */
-    @TableId
-    private Long id;
 
     /**
      * 订单类型
