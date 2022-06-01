@@ -1,5 +1,6 @@
 package com.shangma.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -16,6 +17,7 @@ public enum OrderActionEnum {
     SWAP(2,"换购"),
     PAY(3,"支付");
 
+    @EnumValue
     private final Integer orderAction;
 
     private final String description;

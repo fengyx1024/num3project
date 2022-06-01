@@ -2,6 +2,9 @@ package com.shangma.service;
 
 import com.shangma.entity.Order;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.shangma.entity.OrderVO;
+
+import java.util.List;
 
 /**
 * @author JAVASM
@@ -10,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface OrderService extends IService<Order> {
 
+    Order getOrderDetails(Long id);
 }

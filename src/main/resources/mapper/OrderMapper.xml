@@ -23,4 +23,43 @@
         create_time,create_by,update_by,
         update_time
     </sql>
+    <resultMap id="selectResultMapWithItem" type="com.shangma.entity.Order">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="orderType" column="order_type" jdbcType="INTEGER"/>
+        <result property="orderAction" column="order_action" jdbcType="INTEGER"/>
+        <result property="businessType" column="business_type" jdbcType="INTEGER"/>
+        <result property="orderStatus" column="order_status" jdbcType="INTEGER"/>
+        <result property="consigneeId" column="consignee_id" jdbcType="BIGINT"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="createBy" column="create_by" jdbcType="BIGINT"/>
+        <result property="updateBy" column="update_by" jdbcType="BIGINT"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isOnlineStore" column="is_online_store" jdbcType="INTEGER"/>
+        <result property="storeType" column="store_type" jdbcType="INTEGER"/>
+        <collection property="orderItems" ofType="orderItem">
+            <id property="id" column="iid" jdbcType="BIGINT"/>
+            <result property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="goodsId" column="goods_id" jdbcType="BIGINT"/>
+            <result property="productNum" column="product_num" jdbcType="INTEGER"/>
+            <result property="total" column="total"/>
+            <result property="createBy" column="create_by"/>
+            <result property="createTime" column="create_time"/>
+            <result property="updateTime" column="update_time"/>
+            <result property="updateBy" column="update_by"/>
+        </collection>
+    </resultMap>
+
+    <sql id="with_item_Column_List">
+        id,order_type,order_action,
+        business_type,order_status,consignee_id,
+        create_time,create_by,update_by,
+        update_time,is_online_store,store_type,
+        i.id iid,order_id,goods_id,product_num,
+        total,create_by,create_time,update_time,update_by
+    </sql>
+    <select id="selectByIdWithItem" resultMap="selectResultMapWithItem">
+        select <include refid="with_item_Column_List"/>
+            from t_order o left join t_order_item i
+            on o.id = i.order_id
+    </select>
 </mapper>

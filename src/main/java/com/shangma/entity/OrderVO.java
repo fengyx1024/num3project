@@ -1,10 +1,13 @@
 package com.shangma.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.shangma.enums.OrderActionEnum;
 import com.shangma.enums.OrderStatusEnum;
 import com.shangma.enums.OrderTypeEnum;
 import com.shangma.enums.PayTypeEnum;
 import lombok.Data;
+
+import java.time.LocalDateTime;
 
 /**
  * @description: TODO
@@ -12,17 +15,18 @@ import lombok.Data;
  * @date: 2022/6/1 10:31
  */
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderVO {
     private Long id;
     /**
      * 订单类型
      */
-    private OrderTypeEnum orderType;
+    private Integer orderType;
 
     /**
      * 订单动作
      */
-    private OrderActionEnum orderAction;
+    private Integer orderAction;
 
     /**
      * 业务类型
@@ -32,7 +36,7 @@ public class OrderVO {
     /**
      * 支付方式
      */
-    private PayTypeEnum payType;
+    private Integer payType;
 
     /**
      * 配送方式
@@ -42,5 +46,15 @@ public class OrderVO {
     /**
      * 订单状态
      */
-    private OrderStatusEnum orderStatus;
+    private Integer orderStatus;
+
+    /**
+     * 开始时间
+     */
+    private LocalDateTime startDate;
+
+    /**
+     * 结束时间
+     */
+    private LocalDateTime endDate;
 }
