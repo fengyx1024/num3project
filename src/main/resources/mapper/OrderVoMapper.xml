@@ -39,8 +39,8 @@
             <if test="orderType != null">
                 and order_type = #{orderType}
             </if>
-            <if test="payType != null">
-                and pay_type = #{payType}
+            <if test="payment != null">
+                and payment = #{payment}
             </if>
             <if test="businessType != null">
                 and business_type = #{businessType}
