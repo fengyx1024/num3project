@@ -1,12 +1,10 @@
 package com.shangma.controller;
 
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.shangma.entity.Order;
 import com.shangma.entity.OrderVO;
 import com.shangma.entity.response.ResponseEntity;
-import com.shangma.enums.OrderStatusEnum;
 import com.shangma.service.OrderService;
 import com.shangma.service.OrderVoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +37,7 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public ResponseEntity findOrder(@PathVariable Long id) {
-        Order order = orderService.getById(id);
+        Order order = orderService.getOrderDetails(id);
         return order != null ? ResponseEntity.success(order) : ResponseEntity.fail();
     }
 

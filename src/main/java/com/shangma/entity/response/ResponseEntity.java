@@ -1,5 +1,6 @@
 package com.shangma.entity.response;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.shangma.enums.ResponseStatus;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import lombok.Data;
  * @date: 2022/6/1 9:09
  */
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseEntity<T> {
     private Integer responseCode;
 

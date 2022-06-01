@@ -25,22 +25,22 @@ public class Order extends BaseEntity implements Serializable {
     /**
      * 订单类型
      */
-    private OrderTypeEnum orderType;
+    private Integer orderType;
 
     /**
      * 订单动作
      */
-    private OrderActionEnum orderAction;
+    private Integer orderAction;
 
     /**
      * 业务类型
      */
-    private BusinessTypeEnum businessType;
+    private Integer businessType;
 
     /**
      * 订单状态
      */
-    private OrderStatusEnum orderStatus;
+    private Integer orderStatus;
 
     /**
      * 收货人编号
