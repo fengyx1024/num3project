@@ -28,7 +28,7 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping
-    public ResponseEntity<PageInfo<OrderVO>> findOrderVos(OrderVO orderVO, @RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "5") int pageSize) {
+    public ResponseEntity<PageInfo<OrderVO>> findOrderVos( OrderVO orderVO, @RequestParam(name = "pageNum",defaultValue = "1") int pageNum, @RequestParam(defaultValue = "5") int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<OrderVO> orderVos = orderVoService.findOrderVos(orderVO);
         PageInfo<OrderVO> pageInfo = new PageInfo<>(orderVos);
