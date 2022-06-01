@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangma.mapper.B2bExchangeRequestMapper">
+
+    <resultMap id="BaseResultMap" type="com.shangma.entity.B2bExchangeRequest">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="channelName" column="channel_name" jdbcType="VARCHAR"/>
+            <result property="goodsId" column="goods_id" jdbcType="BIGINT"/>
+            <result property="repairOrdersId" column="repair_orders_id" jdbcType="BIGINT"/>
+            <result property="repairId" column="repair_id" jdbcType="BIGINT"/>
+            <result property="applicationTime" column="application_time" jdbcType="TIMESTAMP"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="auditBy" column="audit_by" jdbcType="VARCHAR"/>
+            <result property="auditTime" column="audit_time" jdbcType="TIMESTAMP"/>
+            <result property="auditState" column="audit_state" jdbcType="INTEGER"/>
+            <result property="auditAdvice" column="audit_advice" jdbcType="VARCHAR"/>
+            <result property="failureDescription" column="failure_description" jdbcType="VARCHAR"/>
+            <result property="note" column="note" jdbcType="VARCHAR"/>
+            <result property="others" column="others" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,channel_name,goods_id,
+        repair_orders_id,repair_id,application_time,
+        create_by,create_time,update_by,
+        update_time,audit_by,audit_time,
+        audit_state,audit_advice,failure_description,
+        note,others
+    </sql>
+</mapper>

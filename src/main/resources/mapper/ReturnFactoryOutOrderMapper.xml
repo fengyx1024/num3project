@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangma.mapper.ReturnFactoryOutOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.shangma.entity.ReturnFactoryOutOrder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="returnFactorySign" column="return_factory_sign" jdbcType="INTEGER"/>
+            <result property="goodsId" column="goods_id" jdbcType="BIGINT"/>
+            <result property="orderTraceInformation" column="order_trace_information" jdbcType="VARCHAR"/>
+            <result property="returnFactoryConfigure" column="return_factory_configure" jdbcType="VARCHAR"/>
+            <result property="returnFactoryCause" column="return_factory_cause" jdbcType="VARCHAR"/>
+            <result property="appearanceState" column="appearance_state" jdbcType="VARCHAR"/>
+            <result property="note" column="note" jdbcType="VARCHAR"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="auditBy" column="audit_by" jdbcType="VARCHAR"/>
+            <result property="auditTime" column="audit_time" jdbcType="TIMESTAMP"/>
+            <result property="auditState" column="audit_state" jdbcType="INTEGER"/>
+            <result property="auditAdvice" column="audit_advice" jdbcType="VARCHAR"/>
+            <result property="others" column="others" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,return_factory_sign,goods_id,
+        order_trace_information,return_factory_configure,return_factory_cause,
+        appearance_state,note,create_by,
+        create_time,update_by,update_time,
+        audit_by,audit_time,audit_state,
+        audit_advice,others
+    </sql>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangma.mapper.ReturnFactoryIntOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.shangma.entity.ReturnFactoryIntOrder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="returnFactorySign" column="return_factory_sign" jdbcType="INTEGER"/>
+            <result property="goodsId" column="goods_id" jdbcType="BIGINT"/>
+            <result property="serialCode" column="serial_code" jdbcType="VARCHAR"/>
+            <result property="returnFactoryType" column="return_factory_type" jdbcType="INTEGER"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="auditBy" column="audit_by" jdbcType="VARCHAR"/>
+            <result property="auditTime" column="audit_time" jdbcType="TIMESTAMP"/>
+            <result property="auditState" column="audit_state" jdbcType="INTEGER"/>
+            <result property="auditAdvice" column="audit_advice" jdbcType="VARCHAR"/>
+            <result property="others" column="others" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,return_factory_sign,goods_id,
+        serial_code,return_factory_type,create_by,
+        create_time,update_by,update_time,
+        audit_by,audit_time,audit_state,
+        audit_advice,others
+    </sql>
+</mapper>

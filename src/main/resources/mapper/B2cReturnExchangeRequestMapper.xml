@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangma.mapper.B2cReturnExchangeRequestMapper">
+
+    <resultMap id="BaseResultMap" type="com.shangma.entity.B2cReturnExchangeRequest">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="grievanceRecordsName" column="grievance_records_name" jdbcType="VARCHAR"/>
+            <result property="sourceOfComplaint" column="source_of_complaint" jdbcType="VARCHAR"/>
+            <result property="grievanceRecordsDescription" column="grievance_records_description" jdbcType="VARCHAR"/>
+            <result property="partsName" column="parts_name" jdbcType="VARCHAR"/>
+            <result property="exchangeCause" column="exchange_cause" jdbcType="VARCHAR"/>
+            <result property="repairOrdersId" column="repair_orders_id" jdbcType="BIGINT"/>
+            <result property="repairId" column="repair_id" jdbcType="BIGINT"/>
+            <result property="applicationTime" column="application_time" jdbcType="TIMESTAMP"/>
+            <result property="newGoodsId" column="new_goods_id" jdbcType="BIGINT"/>
+            <result property="reply" column="reply" jdbcType="VARCHAR"/>
+            <result property="replyTime" column="reply_time" jdbcType="TIMESTAMP"/>
+            <result property="secondaryReply" column="secondary_reply" jdbcType="VARCHAR"/>
+            <result property="secondaryReplyTime" column="secondary_reply_time" jdbcType="TIMESTAMP"/>
+            <result property="note" column="note" jdbcType="VARCHAR"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="auditBy" column="audit_by" jdbcType="VARCHAR"/>
+            <result property="auditTime" column="audit_time" jdbcType="TIMESTAMP"/>
+            <result property="auditState" column="audit_state" jdbcType="INTEGER"/>
+            <result property="auditAdvice" column="audit_advice" jdbcType="VARCHAR"/>
+            <result property="others" column="others" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,order_id,grievance_records_name,
+        source_of_complaint,grievance_records_description,parts_name,
+        exchange_cause,repair_orders_id,repair_id,
+        application_time,new_goods_id,reply,
+        reply_time,secondary_reply,secondary_reply_time,
+        note,create_by,create_time,
+        update_by,update_time,audit_by,
+        audit_time,audit_state,audit_advice,
+        others
+    </sql>
+</mapper>
