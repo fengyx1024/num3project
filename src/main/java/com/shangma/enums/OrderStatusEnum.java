@@ -12,11 +12,11 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum OrderStatusEnum {
-    PASSED(1,"审核通过"),
-    SENT(2,"已出库"),
-    SHIPPED(3,"已发货"),
-    AOG(4,"已到货"),
-    FILED(5,"已归档");
+    PASSED(0,"审核通过"),
+    SENT(1,"已出库"),
+    SHIPPED(2,"已发货"),
+    AOG(3,"已到货"),
+    FILED(4,"已归档");
     @EnumValue
     private final Integer orderStatus;
     private final String description;

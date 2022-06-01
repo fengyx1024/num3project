@@ -12,6 +12,7 @@ import com.shangma.service.OrderVoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -43,10 +44,8 @@ public class OrderController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> updateOrder(Order order) {
-        LambdaUpdateWrapper<Order> wrapper = new LambdaUpdateWrapper<>();
-        OrderStatusEnum orderStatus = order.getOrderStatus();
-        wrapper.set(orderStatus != null, Order::getOrderStatus, orderStatus);
-        return orderService.update(order, wrapper) ? ResponseEntity.success() : ResponseEntity.fail();
+    public ResponseEntity<Void> updateOrder(@RequestBody Order order) {
+        order.setUpdateTime(LocalDateTime.now());
+        return orderService.updateById(order) ? ResponseEntity.success() : ResponseEntity.fail();
     }
 }

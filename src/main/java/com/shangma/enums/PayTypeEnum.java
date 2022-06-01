@@ -12,10 +12,10 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum PayTypeEnum {
-    PAY_TO_DELIVERY(1,"货到付款"),
-    ALIPAY(2,"支付宝支付"),
-    WECHAT_PAY(3,"微信支付"),
-    UNIONPAY(4,"银联");
+    PAY_TO_DELIVERY(0,"货到付款"),
+    ALIPAY(1,"支付宝支付"),
+    WECHAT_PAY(2,"微信支付"),
+    UNIONPAY(3,"银联");
     @EnumValue
     private Integer payType;
 

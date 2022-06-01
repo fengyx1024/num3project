@@ -15,9 +15,9 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum OrderActionEnum {
 
-    ORDER(1,"订购"),
-    SWAP(2,"换购"),
-    PAY(3,"支付");
+    ORDER(0,"订购"),
+    SWAP(1,"换购"),
+    PAY(2,"支付");
 
 
     private final Integer orderAction;

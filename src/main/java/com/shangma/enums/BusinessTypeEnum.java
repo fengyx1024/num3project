@@ -13,8 +13,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum BusinessTypeEnum {
 
-    GENERAL(1,"普通业务"),
-    SET_MEAL(2,"号卡套餐");
+    GENERAL(0,"普通业务"),
+    SET_MEAL(1,"号卡套餐");
 
     @EnumValue
     private final Integer businessType;

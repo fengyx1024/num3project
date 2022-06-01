@@ -1,6 +1,7 @@
 package com.shangma.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -12,18 +13,19 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum OrderTypeEnum {
-    INNER(1,"内部订单"),
-    MALL(2,"商城订单"),
-    WAP(3,"wap订单"),
-    PHONE(4,"电话订单"),
-    AUCTION(5,"竞拍订单"),
-    CART(6,"号卡订单"),
-    SECKILL(7,"秒杀订单");
+    INNER(0,"内部订单"),
+    MALL(1,"商城订单"),
+    WAP(2,"wap订单"),
+    PHONE(3,"电话订单"),
+    AUCTION(4,"竞拍订单"),
+    CART(5,"号卡订单"),
+    SECKILL(6,"秒杀订单");
 
     /**
      * 类型
      */
     @EnumValue
+    @JsonValue
     private final Integer orderType;
 
     /**
