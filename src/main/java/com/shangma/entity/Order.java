@@ -1,18 +1,10 @@
 package com.shangma.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.util.Date;
-<<<<<<< HEAD
-
-=======
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
->>>>>>> 132662a87fd1798695768446e78b5b668a2279e6
 import com.shangma.enums.BusinessTypeEnum;
 import com.shangma.enums.OrderActionEnum;
 import com.shangma.enums.OrderStatusEnum;
@@ -27,10 +19,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @TableName(value ="t_order")
 @Data
-<<<<<<< HEAD
-=======
 @JsonInclude(JsonInclude.Include.NON_NULL)
->>>>>>> 132662a87fd1798695768446e78b5b668a2279e6
 public class Order extends BaseEntity implements Serializable {
 
     /**
@@ -67,8 +56,6 @@ public class Order extends BaseEntity implements Serializable {
      * 网店类型 1淘宝 2当当
      */
     private Integer storeType;
-<<<<<<< HEAD
-=======
 
     /**
      * 收货人信息
@@ -79,5 +66,4 @@ public class Order extends BaseEntity implements Serializable {
      * 订单项
      */
     private List<OrderItem> orderItems;
->>>>>>> 132662a87fd1798695768446e78b5b668a2279e6
 }
