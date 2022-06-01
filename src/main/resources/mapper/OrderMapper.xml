@@ -23,8 +23,6 @@
         create_time,create_by,update_by,
         update_time
     </sql>
-<<<<<<< HEAD
-=======
     <resultMap id="selectResultMapWithItem" type="com.shangma.entity.Order">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="orderType" column="order_type" jdbcType="INTEGER"/>
@@ -64,5 +62,4 @@
             from t_order o left join t_order_item i
             on o.id = i.order_id
     </select>
->>>>>>> 132662a87fd1798695768446e78b5b668a2279e6
 </mapper>

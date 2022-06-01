@@ -10,8 +10,8 @@
         <result property="orderAction" column="order_action" jdbcType="INTEGER"/>
         <result property="businessType" column="business_type" jdbcType="INTEGER"/>
         <result property="orderStatus" column="order_status" jdbcType="INTEGER"/>
-        <result property="payType" column="business_type" jdbcType="INTEGER"/>
-        <result property="distributionMode" column="business_type" jdbcType="INTEGER"/>
+        <result property="payment" column="payment" jdbcType="INTEGER"/>
+        <result property="distributionMode" column="distribution_mode" jdbcType="INTEGER"/>
 
     </resultMap>
 
@@ -21,14 +21,14 @@
                order_action,
                business_type,
                order_status,
-               business_type,
-               business_type
-        from t_order o
-        left join t_consignee c
-        on o.consignee_id = c.id
+               payment,
+               distribution_mode
+                from t_order o
+                left join t_consignee c
+                on o.consignee_id = c.id
     </sql>
 
-    <select id="selectOrderVOs" resultMap="BaseResultMap">
+    <select id="selectOrderVOs"  resultMap="BaseResultMap">
 
         <include refid="Base_Column_List"/>
 

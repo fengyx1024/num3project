@@ -38,7 +38,7 @@ public class OrderVO {
     /**
      * 支付方式
      */
-    private Integer payType;
+    private Integer payment;
 
     /**
      * 配送方式
