@@ -1,5 +1,8 @@
 package com.shangma.enums;
 
+
+import com.baomidou.mybatisplus.annotation.EnumValue;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -15,6 +18,7 @@ public enum OrderActionEnum {
     ORDER(1,"订购"),
     SWAP(2,"换购"),
     PAY(3,"支付");
+
 
     private final Integer orderAction;
 
