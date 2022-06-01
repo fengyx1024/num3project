@@ -14,10 +14,11 @@ logging:
   level:
     com.shangma: debug
   file:
-    path: /log
+    name: E:/workspace/project3/log/mylog.log
 
 # mybatis-plus配置
 mybatis-plus:
   type-aliases-package: com.shangma.entity
   global-config:
     banner: false
+  type-enums-package: com.shangma.enums

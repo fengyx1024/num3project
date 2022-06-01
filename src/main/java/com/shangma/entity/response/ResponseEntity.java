@@ -1,6 +1,6 @@
 package com.shangma.entity.response;
 
-import com.shangma.common.constrants.ResponseStatus;
+import com.shangma.enums.ResponseStatus;
 import lombok.Data;
 
 /**

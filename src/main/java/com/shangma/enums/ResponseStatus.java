@@ -1,11 +1,7 @@
-package com.shangma.common.constrants;
+package com.shangma.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * @description: TODO
