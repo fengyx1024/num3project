@@ -12,7 +12,7 @@
         <result property="orderStatus" column="order_status" jdbcType="INTEGER"/>
         <result property="payment" column="payment" jdbcType="INTEGER"/>
         <result property="distributionMode" column="distribution_mode" jdbcType="INTEGER"/>
-
+        <result property="createTime" column="create_time"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -22,7 +22,8 @@
                business_type,
                order_status,
                payment,
-               distribution_mode
+               distribution_mode,
+               o.create_time
                 from t_order o
                 left join t_consignee c
                 on o.consignee_id = c.id

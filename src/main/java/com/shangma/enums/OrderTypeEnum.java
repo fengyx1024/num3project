@@ -33,4 +33,9 @@ public enum OrderTypeEnum {
      */
     private final String description;
 
+    @Override
+    public String toString() {
+        return getDescription();
+    }
+
 }

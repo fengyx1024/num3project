@@ -22,3 +22,5 @@ mybatis-plus:
   global-config:
     banner: false
   type-enums-package: com.shangma.enums
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler

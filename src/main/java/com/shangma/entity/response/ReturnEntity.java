@@ -11,44 +11,44 @@ import lombok.Data;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ResponseEntity<T> {
+public class ReturnEntity<T> {
     private Integer responseCode;
 
     private String message;
 
     private T data;
 
-    private ResponseEntity(ResponseStatus responseStatus, T data) {
+    private ReturnEntity(ResponseStatus responseStatus, T data) {
         this.responseCode = responseStatus.getResponseCode();
         this.message = responseStatus.getMessage();
         this.data = data;
     }
 
-    private static <T> ResponseEntity<T> getInstance(ResponseStatus responseStatus, T data) {
-        return new ResponseEntity<>(responseStatus, data);
+    private static <T> ReturnEntity<T> getInstance(ResponseStatus responseStatus, T data) {
+        return new ReturnEntity<>(responseStatus, data);
     }
 
-    public static <T> ResponseEntity<T> success(T data) {
+    public static <T> ReturnEntity<T> success(T data) {
         return getInstance(ResponseStatus.SUCCESS, data);
     }
 
-    public static <T> ResponseEntity<T> success(ResponseStatus responseStatus, T data) {
+    public static <T> ReturnEntity<T> success(ResponseStatus responseStatus, T data) {
         return getInstance(responseStatus, data);
     }
 
-    public static <T> ResponseEntity<T> success(ResponseStatus responseStatus) {
+    public static <T> ReturnEntity<T> success(ResponseStatus responseStatus) {
         return getInstance(ResponseStatus.SUCCESS, null);
     }
 
-    public static <T> ResponseEntity<T> success() {
+    public static <T> ReturnEntity<T> success() {
         return getInstance(ResponseStatus.SUCCESS, null);
     }
 
-    public static ResponseEntity<Void> fail(ResponseStatus responseStatus) {
+    public static ReturnEntity<Void> fail(ResponseStatus responseStatus) {
         return getInstance(responseStatus, null);
     }
 
-    public static ResponseEntity<Void> fail() {
+    public static ReturnEntity<Void> fail() {
         return getInstance(ResponseStatus.FAIL, null);
     }
 }

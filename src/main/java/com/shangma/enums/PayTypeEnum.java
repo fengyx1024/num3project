@@ -1,6 +1,7 @@
 package com.shangma.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -17,7 +18,13 @@ public enum PayTypeEnum {
     WECHAT_PAY(2,"微信支付"),
     UNIONPAY(3,"银联");
     @EnumValue
+    @JsonValue
     private Integer payType;
 
     private String description;
+
+    @Override
+    public String toString() {
+        return getDescription();
+    }
 }

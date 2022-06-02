@@ -1,6 +1,7 @@
 package com.shangma.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -17,7 +18,13 @@ public enum BusinessTypeEnum {
     SET_MEAL(1,"号卡套餐");
 
     @EnumValue
+    @JsonValue
     private final Integer businessType;
 
     private final String description;
+
+    @Override
+    public String toString() {
+        return getDescription();
+    }
 }
